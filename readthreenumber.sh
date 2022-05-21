@@ -24,4 +24,25 @@ test_dict[key2]=$val4
 test_dict[key3]=$val6
 test_dict[key4]=$val8
 
+arr=[$val2,$val4,$val6,$val8]
+echo ${arr[*]}
+for ((i = 0; i<4; i++))
+do
+
+    for((j = 0; j<4-i-1; j++))
+    do
+
+        if [ ${arr[j]} -gt ${arr[$((j+1))]} ]
+        then
+            # swap
+            temp=${arr[j]}
+            arr[$j]=${arr[$((j+1))]}
+            arr[$((j+1))]=$temp
+        fi
+    done
+done
+
+echo "Array in sorted order :"
+echo ${arr[*]}
+
 
