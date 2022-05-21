@@ -10,3 +10,7 @@ echo $val2
 val3=$(($a % $b ))
 val4=$(($val + $c))
 echo "$val4"
+
+val5=$(($c + $a ))
+val6=$(($val5 / $b))
+echo "$val6"
