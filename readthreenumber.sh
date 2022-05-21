@@ -18,3 +18,10 @@ echo "$val6"
 val7=$(($c + $a ))
 val8=$(($val7 / $b))
 echo "$val8"
+
+test_dict[key1]=$val2
+test_dict[key2]=$val4
+test_dict[key3]=$val6
+test_dict[key4]=$val8
+
+
